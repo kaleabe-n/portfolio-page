@@ -16,7 +16,7 @@
                 <img src="images/dropDownIcon.svg" alt="humburger menu icon" onclick="dropDown()" id="humburger">
                 <img src="images/closeIcon.svg" alt="close icon" onclick="cls()" id="close">
             </section>
-            <ul id="nav">
+            <ul id="nav" class="nav">
                 <li><a href="index.html" style="font-weight:bold;">Home</a></li>
                 <li><a href="webpages/About.html">About</a></li>
                 <li><a href="webpages/Contacts.html">Contacts</a></li>
@@ -65,15 +65,12 @@
         <p>©2021 Developed by Kaleabe Negussie</p>
     </footer>
     <script>
-        function cls(){
-            document.getElementById("nav").style.display="none"
-            document.getElementById("close").style.display="none"
-            document.getElementById("humburger").style.display="inline"
-        }
         function dropDown(){
-            document.getElementById("nav").style.display="flex"
-            document.getElementById("humburger").style.display="none"
-            document.getElementById("close").style.display="inline"
+            var humburger =  document.getElementById("nav")
+            if ( humburger.className == "nav"){
+                humburger.className += "drop"
+            }
+            else humburger.className= "nav"
         }
     </script>
 </body>
