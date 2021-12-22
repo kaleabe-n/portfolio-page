@@ -15,6 +15,7 @@ nav section img{
     margin: 0;
     position: relative;
     top: 0;
+    float:right;
 }
 nav section img#close{
     display: none;
